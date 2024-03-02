@@ -32,7 +32,12 @@ btn.addEventListener("click",()=>{
             age_date++;
         }
     }
-    console.log(year , month ,age_date );
+   
+  // check if usr enter wrong year 
+    if(dob.getFullYear() > date.getFullYear()){
+        document.getElementById("text").innerHTML = "invalid Date of Birth";
+    }
+   
     document.getElementById("month").innerHTML= month;
     document.getElementById("days").innerHTML = age_date;
     
